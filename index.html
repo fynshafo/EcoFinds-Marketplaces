@@ -1,22 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>EcoFinds Marketplace</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>EcoFinds</title>
+<link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <h1>EcoFinds Marketplace 🌱</h1>
-  <div id="auth">
-    <input id="email" type="text" placeholder="Email">
-    <input id="password" type="password" placeholder="Password">
-    <button onclick="login()">Login</button>
-    <button onclick="register()">Register</button>
-  </div>
+<header class="topbar">
+<div class="brand">🌿 EcoFinds</div>
+<input id="search" placeholder="Search by title..." />
+<select id="categoryFilter"></select>
+<nav class="nav">
+<button id="navFeed">Feed</button>
+<button id="navMy">My Listings</button>
+<button id="navAdd">+ Add</button>
+<button id="navCart">Cart</button>
+<button id="navOrders">Previous Purchases</button>
+<button id="navMe">Dashboard</button>
+<button id="navAuth"></button>
+</nav>
+</header>
 
-  <h2>Products</h2>
-  <div id="products"></div>
 
-  <script src="script.js"></script>
+<main id="view"></main>
+
+
+<template id="tpl-card">
+<div class="card">
+<img class="card-img" />
+<div class="card-body">
+<h3 class="card-title"></h3>
+<p class="card-price"></p>
+<div class="card-actions"></div>
+</div>
+</div>
+</template>
+
+
+<script src="/app.js"></script>
 </body>
 </html>
